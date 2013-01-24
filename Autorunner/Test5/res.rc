@@ -1,0 +1,203 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "Файл"
+    BEGIN
+        MENUITEM "Обновить",                    ID_FILE_REFRESH
+        MENUITEM "Применить",                   ID_FILE_APPLY
+        MENUITEM SEPARATOR
+        MENUITEM "Включить все",                ID_FILE_ALLON
+        MENUITEM "Выключить все",               ID_FILE_ALLOFF
+        MENUITEM SEPARATOR
+        MENUITEM "Выход",                       ID_FILE_CLOSE40002
+    END
+    POPUP "Изменить"
+    BEGIN
+        MENUITEM "Вкл/Выкл",                    ID_EDIT_TOGGLE
+        MENUITEM "Изменить",                    ID_EDIT_EDIT
+        MENUITEM "Удалить",                     ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Добавить запись",             ID_EDIT_ADD
+    END
+    POPUP "Схема загрузки"
+    BEGIN
+        MENUITEM "Редактировать",               ID_SCHEME_EDIT
+    END
+    POPUP "Помощь"
+    BEGIN
+        MENUITEM "О программе",                 ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADD DIALOGEX 0, 0, 294, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавление записи"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,184,156,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,236,156,50,14
+    EDITTEXT        IDC_PATH,16,46,208,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Обзор...",IDC_BROWSE,227,46,50,14
+    LTEXT           "Укажите путь к исполняемому файлу:",IDC_STATIC,19,37,205,8
+    GROUPBOX        "Тип автозагрузки",IDC_STATIC,17,68,118,54
+    CONTROL         "Пользователь (HKCU)",IDC_CU,"Button",BS_AUTORADIOBUTTON,25,83,89,10
+    CONTROL         "Локальная машина (HKLM)",IDC_LM,"Button",BS_AUTORADIOBUTTON,25,101,105,10
+    CONTROL         "Активировать",IDC_ACTIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,129,65,10
+    LTEXT           "Название записи:",IDC_STATIC,19,10,60,8
+    EDITTEXT        IDC_NAME,16,19,105,14,ES_AUTOHSCROLL
+END
+
+IDD_SCHEME DIALOGEX 0, 0, 199, 168
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Управление схемами загрузки"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,147,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,147,50,14
+    GROUPBOX        "Существующие схемы",IDC_STATIC,7,7,185,67
+    COMBOBOX        IDC_LIST,15,22,105,500,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Применить",IDC_APPLY,16,41,50,14
+    GROUPBOX        "Сохранить текущую примененную схему",IDC_STATIC,7,86,185,53
+    LTEXT           "Имя схемы:",IDC_STATIC,14,99,39,8
+    EDITTEXT        IDC_SCNAME,15,110,103,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Сохранить",IDC_SAVE,121,110,50,14
+    PUSHBUTTON      "Удалить",IDC_DELETE,70,41,50,14
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 249, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0xCC
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,117,81,50,14
+    LTEXT           "Редактор автозагрузки",IDC_STATIC,106,26,82,8
+    LTEXT           "Выполнил студент группы ИТД-62",IDC_STATIC,106,41,118,8
+    LTEXT           "Васильев Михаил",IDC_STATIC,106,56,60,8
+    CONTROL         108,IDC_STATIC,"Static",SS_BITMAP,17,15,69,64,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_SCHEME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "D:\\MGTU\\MVS9\\LOGO.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
